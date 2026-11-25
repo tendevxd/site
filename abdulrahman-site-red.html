@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Abdulrahman Alnouman – Director, producer, builder</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0a0b;--panel:#151517;--text:#f5f2ee;--muted:#a6a1a0;--red:#ff2a2a;--red-ink:#0a0a0b;--line:#2a2a2d;
+  color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f6f2ee;--panel:#ebe5e0;--text:#0e0e0f;--muted:#595454;--red:#d7141a;--red-ink:#ffffff;--line:#cfc7c1;color-scheme:light}}
+:root[data-theme="light"]{--bg:#f6f2ee;--panel:#ebe5e0;--text:#0e0e0f;--muted:#595454;--red:#d7141a;--red-ink:#ffffff;--line:#cfc7c1;color-scheme:light}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px);height:100%}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Manrope","Helvetica Neue",Arial,sans-serif;font-size:17px;line-height:1.65;overflow-x:hidden}
+h1,h2,h3,.disp{font-family:"Anton","Impact","Arial Narrow",sans-serif;font-weight:400;letter-spacing:.005em;line-height:1}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:2px solid var(--red)}
+.bar{max-width:1180px;margin:0 auto;padding:12px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.brand{font-family:"Anton",Impact,sans-serif;font-size:1.35rem;text-decoration:none;display:flex;align-items:center;gap:10px}
+.brand i{width:14px;height:14px;background:var(--red);display:inline-block;transform:rotate(45deg)}
+nav{display:flex;gap:10px}
+nav a{text-decoration:none;font-weight:700;padding:8px 18px;border:2px solid var(--line);border-radius:999px}
+nav a[aria-current="page"]{background:var(--red);border-color:var(--red);color:var(--red-ink)}
+main{max-width:1180px;margin:0 auto;padding:0 24px 96px}
+.view{display:none}.view.on{display:block}
+
+.hero{padding:64px 0 40px;position:relative}
+.hero h1{font-size:clamp(3.6rem,15vw,11.5rem);line-height:.88;text-transform:uppercase;margin:0}
+.hero h1 span{display:block;color:var(--red)}
+.hero p{font-size:clamp(1.1rem,2.2vw,1.5rem);max-width:36ch;margin:28px 0 32px;font-weight:500}
+.btn{display:inline-block;background:var(--red);color:var(--red-ink);font-weight:800;padding:15px 30px;text-decoration:none;border:2px solid var(--red);box-shadow:6px 6px 0 var(--text);transition:transform .12s,box-shadow .12s}
+.btn:hover{transform:translate(3px,3px);box-shadow:3px 3px 0 var(--text)}
+button.btn{font:inherit;font-weight:800;cursor:pointer}
+.btn.alt{background:transparent;color:var(--text);border-color:var(--text);box-shadow:6px 6px 0 var(--red);margin-left:14px}
+.tick{background:var(--red);color:var(--red-ink);overflow:hidden;white-space:nowrap;transform:rotate(-1.4deg);margin:34px -40px 0;padding:14px 0;border-block:3px solid var(--text)}
+.tick div{display:inline-block;font-family:"Anton",Impact,sans-serif;font-size:1.7rem;animation:run 28s linear infinite}
+@keyframes run{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.tick div{animation:none}.btn{transition:none}}
+
+section{padding:72px 0 8px}
+h2{font-size:clamp(2.4rem,6vw,4.4rem);text-transform:uppercase;margin:0 0 32px}
+h2::after{content:"";display:block;width:84px;height:8px;background:var(--red);margin-top:14px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.tile{background:var(--panel);border-top:6px solid var(--red);padding:26px 24px 28px}
+.tile h3{font-size:1.7rem;margin:0 0 10px;text-transform:uppercase}
+.tile p{margin:0;color:var(--muted)}
+.two{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:start}
+.two p{margin:0 0 16px;max-width:62ch}
+.big{font-size:1.25rem;font-weight:500}
+.facts{background:var(--red);color:var(--red-ink);padding:28px;margin:0;list-style:none;box-shadow:10px 10px 0 var(--text)}
+.facts li{padding:10px 0;border-bottom:2px solid rgba(0,0,0,.25);font-weight:700}
+.facts li:last-child{border:0}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 28px;padding:0;list-style:none}
+.chips li{border:2px solid var(--text);padding:6px 14px;font-weight:700;border-radius:999px}
+.chips.r li{border-color:var(--red)}
+.sub{font-family:"Anton",Impact,sans-serif;font-size:1.5rem;margin:0 0 12px;text-transform:uppercase}
+.lang{display:flex;justify-content:space-between;align-items:baseline;border-bottom:2px solid var(--line);padding:14px 0;font-size:1.2rem;font-weight:700}
+.lang span{color:var(--muted);font-weight:500;font-size:1rem}
+.goal{background:var(--red);color:var(--red-ink);padding:44px 36px;margin-top:72px;box-shadow:10px 10px 0 var(--text)}
+.goal h2{margin:0 0 16px}.goal h2::after{background:var(--red-ink)}
+.goal p{font-size:1.25rem;max-width:58ch;margin:0;font-weight:500}
+
+.page-title{padding:56px 0 24px}
+.page-title h1{font-size:clamp(3.4rem,12vw,8rem);text-transform:uppercase;margin:0}
+.page-title p{font-size:1.25rem;max-width:44ch;margin:14px 0 0;color:var(--muted)}
+.contact{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;padding-top:24px}
+.note{color:var(--muted);font-size:.95rem;margin:0}
+.big-mail{font-family:"Anton",Impact,sans-serif;font-size:clamp(1.6rem,4vw,2.6rem);word-break:break-all;color:var(--red);text-decoration:none;line-height:1.1}
+form{display:grid;gap:18px;background:var(--panel);padding:28px;border-top:6px solid var(--red)}
+label{display:grid;gap:6px;font-weight:700}
+input,textarea{font:inherit;font-weight:500;background:var(--bg);color:var(--text);border:2px solid var(--line);padding:12px 14px;width:100%}
+input:focus,textarea:focus{border-color:var(--red)}
+textarea{min-height:150px;resize:vertical}
+footer{max-width:1180px;margin:0 auto;padding:28px 24px 40px;color:var(--muted);border-top:2px solid var(--line)}
+
+@media (max-width:860px){
+  .grid{grid-template-columns:1fr 1fr}
+  .two,.contact{grid-template-columns:1fr;gap:32px}
+  .btn.alt{margin:18px 0 0}
+}
+@media (max-width:560px){.grid{grid-template-columns:1fr}.tick{margin-inline:-30px}.goal{padding:32px 22px}}
+</style>
+</head>
+<body>
+<header><div class="bar">
+  <a class="brand" href="#home"><i></i>Alnouman</a>
+  <nav aria-label="Main">
+    <a href="#home" data-v="home">Home</a>
+    <a href="#contact" data-v="contact">Contact</a>
+  </nav>
+</div></header>
+
+<main>
+<div class="view" id="v-home">
+  <div class="hero">
+    <h1>Abdulrahman <span>Alnouman</span></h1>
+    <p>Director, producer, and builder from Duhok, Iraq. I tell stories on stage and screen, and I code the tools behind them.</p>
+    <a class="btn" href="#contact">Get in touch</a><a class="btn alt" href="#contact">Send a message</a>
+    <div class="tick" aria-hidden="true"><div>Directing ✦ Devising ✦ Producing ✦ Live visuals ✦ Video art ✦ Software ✦ Directing ✦ Devising ✦ Producing ✦ Live visuals ✦ Video art ✦ Software ✦ </div></div>
+  </div>
+
+  <section>
+    <h2>What I do</h2>
+    <div class="grid">
+      <div class="tile"><h3>Directing</h3><p>I lead performance for stage and screen, from first idea to opening night.</p></div>
+      <div class="tile"><h3>Devising</h3><p>I build original work with a team, starting from a question or an image instead of a finished script.</p></div>
+      <div class="tile"><h3>Producing</h3><p>I plan, schedule, and deliver creative projects from concept to finished work.</p></div>
+      <div class="tile"><h3>Live visuals</h3><p>I make audio-reactive and camera-driven visuals in TouchDesigner.</p></div>
+      <div class="tile"><h3>Film and video art</h3><p>I combine real footage with 3D worlds using Blender, DaVinci Resolve, and After Effects.</p></div>
+      <div class="tile"><h3>Software</h3><p>I build phone apps, Discord bots, games, and local AI tools in Python, JavaScript, and C++.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>About me</h2>
+    <div class="two">
+      <div>
+        <p class="big">I study creative production at an art institute and college of fine arts in Duhok. My training is in theater.</p>
+        <p>What sets me apart is that I build my own tools. When a project needs a phone that triggers live visuals, a bot that speaks in a voice call, or a 3D engine to test an idea, I write it myself. That lets me move between story, image, sound, and code.</p>
+        <p>My taste runs to 1960s rock and psychedelic looks, Tame Impala and Radiohead, and the music of Brazilian sertanejo and corridos tumbados. I write in Iraqi Arabic and English.</p>
+      </div>
+      <ul class="facts">
+        <li>Based in Duhok (Dohuk), Iraq</li>
+        <li>Student, theater and creative production</li>
+        <li>Self-taught in code and real-time media</li>
+        <li>Building an English-language portfolio</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Skills and tools</h2>
+    <p class="sub">Creative</p>
+    <ul class="chips r"><li>Directing</li><li>Devising</li><li>Producing</li><li>Series writing</li><li>Dialogue in Iraqi Arabic</li></ul>
+    <p class="sub">Visual and sound</p>
+    <ul class="chips"><li>TouchDesigner</li><li>Blender</li><li>DaVinci Resolve</li><li>After Effects</li><li>Adobe suite</li><li>Unreal Engine</li></ul>
+    <p class="sub">Code</p>
+    <ul class="chips"><li>Python</li><li>JavaScript</li><li>C++</li><li>Flask</li><li>OpenCV</li><li>MediaPipe</li><li>OSC and NDI</li><li>Ollama</li><li>GitHub Actions</li></ul>
+  </section>
+
+  <section>
+    <div class="two" style="grid-template-columns:1fr 1fr">
+      <div>
+        <h2>Languages</h2>
+        <div class="lang">Arabic <span>Iraqi dialect</span></div>
+        <div class="lang">English <span>Portfolio and professional use</span></div>
+      </div>
+      <div>
+        <h2>Education</h2>
+        <div class="lang">Art Institute and College of Fine Arts <span>Duhok</span></div>
+        <div class="lang">Theater and creative production <span>Directing, devising, producing</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="goal">
+    <h2>Where I’m headed</h2>
+    <p>I’m aiming for a funded postgraduate program in Europe, in the performing and creative arts. I want to make work rooted in Iraq that speaks to audiences everywhere, and to blend live performance, film, and interactive media.</p>
+  </div>
+</div>
+
+<div class="view" id="v-contact">
+  <div class="page-title">
+    <h1>Contact</h1>
+    <p>For collaborations, programs, and projects. I read every message.</p>
+  </div>
+  <div class="contact">
+    <div>
+      <p class="note">Email</p>
+      <p><a class="big-mail" href="mailto:abodwd281@gmail.com">abodwd281@gmail.com</a></p>
+      <p class="note" style="margin-top:24px">Based in Duhok (Dohuk), Iraq</p>
+    </div>
+    <form id="mailform" aria-label="Send a message">
+      <label>Your name<input id="f-name" name="name" autocomplete="name" required></label>
+      <label>Your email<input id="f-mail" name="email" type="email" autocomplete="email" required></label>
+      <label>Message<textarea id="f-msg" name="message" required></textarea></label>
+      <div><button class="btn" type="submit">Send message</button></div>
+      <p class="note">This opens your email app with the message filled in, ready to send.</p>
+    </form>
+  </div>
+</div>
+</main>
+
+<footer>Abdulrahman Mohamed Alnouman · Duhok, Iraq</footer>
+
+<script>
+(function(){
+  var views=["home","contact"];
+  function show(){
+    var h=(location.hash||"").replace("#","");
+    if(views.indexOf(h)<0)h="home";
+    views.forEach(function(v){document.getElementById("v-"+v).classList.toggle("on",v===h)});
+    document.querySelectorAll("nav a").forEach(function(a){
+      if(a.getAttribute("data-v")===h)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current");
+    });
+    window.scrollTo(0,0);
+  }
+  window.addEventListener("hashchange",show);
+  show();
+  document.getElementById("mailform").addEventListener("submit",function(e){
+    e.preventDefault();
+    var n=document.getElementById("f-name").value,m=document.getElementById("f-mail").value,t=document.getElementById("f-msg").value;
+    location.href="mailto:abodwd281@gmail.com?subject="+encodeURIComponent("Message from "+n)+"&body="+encodeURIComponent(t+"\n\n– "+n+" ("+m+")");
+  });
+})();
+</script>
+</body>
+</html>
